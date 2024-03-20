@@ -3,3 +3,14 @@
     justify-content: $justify;
     align-items: $align;
 }
+
+@mixin font-text ($font-size: 16px, $font-weight: 400) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+@mixin flex-center($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}

@@ -1,12 +1,25 @@
 .home-form {
 
-    .home-item-background {
-        width: 1500;
+    .home-background {
+        width: 100%;
         height: 519.42px;
         object-fit: cover;
-        @media (max-width: 547px) {
-            width: 100%;
-        }
+    }
+
+    .home-background-mobile {
+        display: none;
+    }
+
+    .home-sidebar-mobile {
+        display: none;
+    }
+
+    .overlay-mobile {
+        display: none;
+    }
+
+    .home-sidebar-mobile-box {
+        display: none;
     }
 
     .home-content {
@@ -16,37 +29,36 @@
         justify-content: space-between;
         box-sizing: border-box;
 
-        .home-content-navbar {
+        .home-sidebar {
             width: 214px;
             height: fit-content;
             margin-top: 100px;
             border-right: 1px solid var(--background-footer);
 
-            .icon-search-blog {
+            .icon-search {
+                width: 19px;
                 position: absolute;
-                margin-top: 13px;
-                margin-left: 170px;
-            }
+                margin-top: 10px;
+                margin-left: 165px;
 
-            .icon-search-author {
-                position: absolute;
-                margin-top: 13px;
-                margin-left: 170px;
+                &:hover {
+                    cursor: pointer;
+                }
+
             }
 
             .search-input {
-                width: 200px;
-                height: 40px;
+                width: 145px;
+                height: auto;
+                padding: 11px 40px 11px 15px;
                 border-radius: 8px;
-                border-color: var(--border-input);
-                font-size: 16px;
-                font-weight: 400;
+                border: 1px solid var(--border-input);
+                @include font-text;
                 color: var(--background-footer);
             }
 
             .home-content-navbar-topic {
-                font-size: 20px;
-                font-weight: 700;
+                @include font-text(20px, 700);
                 margin-bottom: 15px;
                 padding-top: 15px;
                 border-top: 1px solid var(--background-footer);
@@ -56,24 +68,36 @@
                 margin-top: 10px;
                 margin-left: 20px;
 
-                .category-box {
-                    width: 15px;
-                    height: 15px;
-                }
+                .category-list-item {
+                    margin-bottom: 10px;
 
-                .category-name {
-                    font-size: 16px;
-                    font-weight: 400;
+                    .category-box {
+                        display: none;
+                    }
+
+                    .category-name {
+                        @include font-text;
+
+                        &::before {
+                            content: '';
+                            display: inline-block;
+                            width: 15px;
+                            height: 15px;
+                            border: 1px solid rgba(0, 0, 0, 1);
+                            cursor: pointer;
+                            margin-right: 10px;
+                        }
+                    }
                 }
             }
         }
 
         .home-content-blog {
             width: 926px;
-            height: 575px;
+            height: 100%;
 
             .home-blog-list {
-                height: 100%;
+                height: 575px;
                 margin-top: 100px;
                 box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25),
                     0px 3px 6px 0px rgba(0, 0, 0, 0.25);
@@ -89,73 +113,84 @@
                     align-items: center;
                     padding: 0px 30px;
 
-                    .icon-info {
-                        width: 24px;
-                        height: 24px;
-                    }
+                    .item-info {
+                        display: flex;
+                        align-items: center;
 
-                    .info-blog {
-                        margin-left: 5px;
-                        margin-right: 20px;
+                        .icon-info {
+                            width: 24px;
+                            height: auto;
+                        }
+
+                        .info-blog {
+                            margin-left: 5px;
+                            margin-right: 20px;
+                        }
                     }
                 }
 
                 .blog-content {
                     .blog-title {
-                        font-size: 30px;
-                        font-weight: 700;
+                        @include font-text(30px, 700);
                         margin: 0px;
                         padding: 0px 30px;
                     }
 
                     .blog-description {
                         padding: 0px 30px;
-                        font-size: 16px;
-                        font-weight: 400;
+                        @include font-text;
                         line-height: 18.75px;
+                        margin-bottom: 22px;
                     }
 
-                    .text-detail {
-                        margin-top: 15px;
-                        margin-left: 30px;
-                        padding: 8px 15px;
-                        width: 137px;
-                        height: 40px;
-                        border: 1px solid var(--border-input);
-                        border-radius: 4px;
-                        color: var(rgba(196, 0, 0, 1));
+                }
 
-                        img {
-                            margin-left: 7px;
-                        }
+                .text-detail {
+                    margin-top: 15px;
+                    margin-left: 30px;
+                    padding: 10px 14px;
+                    border: 1px solid var(--border-input);
+                    border-radius: 4px;
+                    color: rgba(196, 0, 0, 1);
+
+                    img {
+                        margin-left: 7px;
                     }
                 }
             }
 
             .home-move-tag {
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include flex-center;
                 margin: 50px 0px;
 
                 .move-left {
                     width: 20px;
                     height: 20px;
+                    margin-right: 10px;
                     padding: 10px;
                     border-radius: 50%;
                     background-color: rgba(196, 0, 0, 1);
                 }
 
                 .page-number {
-                    font-size: 20px;
-                    font-weight: 700;
+                    @include font-text(20px, 700);
                     color: rgba(33, 30, 59, 1);
                     margin: 0px 10px;
+
+                    &.third {
+                        width: 26px;
+                        text-align: center;
+                        padding: 3px;
+                        border-radius: 50%;
+                        color: rgba(196, 0, 0, 1);
+                        background-color: rgba(255, 228, 228, 1);
+                    }
                 }
 
                 .move-right {
                     width: 20px;
                     height: 20px;
+                    margin-left: 10px;
                     padding: 10px;
                     border-radius: 50%;
                     background-color: rgba(229, 229, 229, 1);

@@ -4,16 +4,20 @@
     --btn-header: #770303;
     --background-footer: #000000;
     --border-input: #202E33;
+    --border-input-mobile: rgba(32, 46, 51, 1);
+    --text-black-mobile: rgba(0, 0, 0, 1);
 }
 
 body {
     width: 100%;
     height: 100%;
     font-family: 'Roboto';
-    margin: 0px;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
     color: var(--main-black);
 }
+
+

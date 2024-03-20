@@ -6,36 +6,16 @@
 
     .header-navbar {
         width: 100%;
-        // @include flex-center(space-between, center);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex-center(space-between, center);
         padding: 0px 150px;
-
-        @media (max-width: 547px) {
-            padding: 0px 50px;
-        }
 
         .header-navbar-right {
             display: flex;
             align-items: center;
 
-            @media (max-width: 547px) {
-                width: 100%;
-            }
-
-            .header-navbar-mobile {
-                display: none;
-
-                @media (max-width: 547px) {
-                    display: block;
-                }
-            }
-
-
             .header-logo {
                 width: 61px;
-                height: 61px;
+                height: auto;
             }
 
             .header-logo-name {
@@ -46,19 +26,11 @@
 
         .header-navbar-left {
             width: 35%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @include flex-center(space-between, center);
             margin-left: 100px;
 
-            @media (max-width: 546px) {
-                display: none;
-            }
-
             .header-custom-page {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
+                @include flex-center(space-between, center);
 
                 .header-btn-top {
                     margin-right: 20px;
@@ -75,9 +47,7 @@
             }
 
             .header-user {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
+                @include flex-center(space-between, center);
 
                 .header-user-name {
                     margin-right: 15px;
@@ -86,9 +56,13 @@
 
                 .header-user-avatar {
                     width: 26px;
-                    height: 26px;
+                    height: auto;
                 }
             }
         }
+    }
+
+    .header-mobile {
+        display: none;
     }
 }
