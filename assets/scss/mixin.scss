@@ -9,8 +9,7 @@
     font-weight: $font-weight;
 }
 
-@mixin flex-center($justify: center, $align: center) {
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
-}
+@mixin mobile { @media (min-width: 480px) and (max-width: 768px) {       
+   @content;   
+ } 
+}  
