@@ -9,7 +9,14 @@
     font-weight: $font-weight;
 }
 
-@mixin mobile { @media (min-width: 480px) and (max-width: 768px) {       
-   @content;   
- } 
-}  
+@mixin mobile {
+    @media (min-width: 320px) and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile-min {
+    @media (min-width: 320px) and (max-width: 479px) {
+        @content;
+    }
+}

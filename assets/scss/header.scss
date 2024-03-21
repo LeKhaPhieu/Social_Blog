@@ -13,7 +13,7 @@
     .header-navbar {
         @include flex-center(space-between, center);
         width: 100%;
-        padding: 0 150px;
+        padding: 0 10%;
 
         @include mobile {
             display: none;
@@ -34,7 +34,7 @@
 
         .header-navbar-left {
             @include flex-center(space-between, center);
-            width: 35%;
+            width: 30%;
             margin: 0 0 0 100px;
 
             .header-custom-page {
@@ -50,7 +50,7 @@
                 }
 
                 .header-btn-create {
-                    font-size: 15px;
+                    @include font-text(15px, 500);
                 }
             }
 
@@ -59,8 +59,8 @@
                 margin: 0 0 0 15px;
 
                 .header-user-name {
+                    @include font-text(15px, 500);
                     margin: 0 15px 0 0;
-                    font-size: 15px;
                 }
 
                 .header-user-avatar {
@@ -87,7 +87,7 @@
 
             .header-logo-mobile {
                 @include flex-center(flex-start, center);
-                margin-left: 33%;
+                margin-left: 23%;
 
                 .header-logo-image {
                     width: 47.09px;
