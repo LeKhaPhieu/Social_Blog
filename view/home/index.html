@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" href="../../assets/css/main.css">
-    <link rel="stylesheet" href="../../assets/js/home.js">
 </head>
 
 <body>
@@ -38,16 +36,17 @@
             </div>
         </div>
     </header>
+
     <div class="home-form">
         <img class="home-background" src="../../assets/img/image_main_home.png">
         <img class="home-background-mobile" src="../../assets/img/image_home_mobile.png">
         <div class="home-sidebar-mobile">
             <img id="btnShowSidebar" class="sidebar-icon" src="../../assets/img/icon-sidebar-mobile.png" alt="">
         </div>
-        <div class="overlay-mobile" id="overlayMobile"></div>
-        <div class="home-sidebar-mobile-box" id="sidebarMobile">
+        <div class="overlay-mobile show" id="overlayMobile"></div>
+        <div class="home-sidebar-mobile-box show" id="sidebarMobile">
             <h3 class="title-list top">Search Blogs</h3>
-            <div class="sidebar-mobile-item">
+            <form class="sidebar-mobile-item">
                 <p class="title-list">Title</p>
                 <img class="icon-search-mobile title" src="../../assets/img/icon_search.png" alt="">
                 <input class="search-mobile blog" type="text" placeholder="Search blog title">
@@ -74,13 +73,14 @@
                 <img class="icon-search-mobile author" src="../../assets/img/icon_search.png" alt="">
                 <input class="search-mobile author" type="text" placeholder="Search author">
                 <div class="sidebar-btn">
-                    <button class="sidebar-btn-box close" id="closeSidebar">Cancel</button>
+                    <button class="sidebar-btn-box close show" id="closeSidebar">Cancel</button>
                     <button class="sidebar-btn-box search">Search</button>
                 </div>
-            </div>
+            </form>
         </div>
+
         <div class="home-content">
-            <div class="home-sidebar">
+            <form class="home-sidebar-desktop">
                 <img class="icon-search blog" src="../../assets/img/icon_search.png" alt="">
                 <input type="text" class="search-input blog" placeholder="Search blog">
                 <p class="home-content-navbar-topic">Categories</p>
@@ -105,12 +105,11 @@
                 <p class="home-content-navbar-topic">Author</p>
                 <img class="icon-search author" src="../../assets/img/icon_search.png" alt="">
                 <input type="text" class="search-input author" placeholder="Search author">
-            </div>
+            </form>
+
             <div class="home-content-blog">
                 <div class="home-blog-list">
-                    <img class="home-blog-list-image"
-                        src="../../assets/img/image-blog.png"
-                        alt="">
+                    <img class="home-blog-list-image" src="../../assets/img/image-blog.png" alt="">
                     <div class="home-blog-list-info">
                         <div class="item-info">
                             <img class="icon-info avatar" src="../../assets/img/icon_avatar_blog.png" alt="">
@@ -141,10 +140,9 @@
                         <img src="../../assets/img/icon_detail.png" alt="">
                     </a>
                 </div>
+
                 <div class="home-blog-list">
-                    <img class="home-blog-list-image"
-                        src="../../assets/img/image-blog.png"
-                        alt="">
+                    <img class="home-blog-list-image" src="../../assets/img/image-blog.png" alt="">
                     <div class="home-blog-list-info">
                         <div class="item-info">
                             <img class="icon-info avatar" src="../../assets/img/icon_avatar_blog.png" alt="">
@@ -175,10 +173,9 @@
                         <img src="../../assets/img/icon_detail.png" alt="">
                     </a>
                 </div>
+
                 <div class="home-blog-list">
-                    <img class="home-blog-list-image"
-                        src="../../assets/img/image-blog.png"
-                        alt="">
+                    <img class="home-blog-list-image" src="../../assets/img/image-blog.png" alt="">
                     <div class="home-blog-list-info">
                         <div class="item-info">
                             <img class="icon-info avatar" src="../../assets/img/icon_avatar_blog.png" alt="">
@@ -209,11 +206,12 @@
                         <img src="../../assets/img/icon_detail.png" alt="">
                     </a>
                 </div>
+
                 <div class="home-move-tag">
                     <img class="move-left" src="../../assets/img/icon_arrow_move_left.png" alt="">
                     <a class="page-number" href="">1</a>
                     <a class="page-number" href="">2</a>
-                    <a class="page-number third" href="">3</a>
+                    <a class="page-number active" href="">3</a>
                     <a class="page-number" href="">4</a>
                     <a class="page-number" href="">5</a>
                     <a class="page-number" href="">6</a>
@@ -222,11 +220,14 @@
             </div>
         </div>
     </div>
+
     <footer>
         <div class="footer-form">
             <p class="footer-content">Copyright © 2024. Made by Regit JSC. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="../../assets/js/home.js"></script>
 </body>
 
 </html>

@@ -1,16 +1,24 @@
-const btnShowSidebar = document.getElementById('btnShowSidebar')
-const boxSidebarMobile = document.getElementById('sidebarMobile')
-const closeBoxSidebar = document.getElementById('closeSidebar')
-const overlayMobile = document.getElementById('overlayMobile')
+const btnShowSidebar = document.getElementById('btnShowSidebar');
+const boxSidebarMobile = document.getElementById('sidebarMobile');
+const closeBoxSidebar = document.getElementById('closeSidebar');
+const overlayMobile = document.getElementById('overlayMobile');
 
 function showSidebar() {
-    boxSidebarMobile.style.display = 'block';
-    overlayMobile.style.display = 'block';
+    boxSidebarMobile.classList.add('show');
+    overlayMobile.classList.add('show');
 }
-btnShowSidebar.addEventListener('click', showSidebar);
 
 function hiddenSidebar() {
-    boxSidebarMobile.style.display = 'none';
-    overlayMobile.style.display = 'none';
+    boxSidebarMobile.classList.remove('show');
+    overlayMobile.classList.remove('show');
 }
+
+btnShowSidebar.addEventListener('click', showSidebar);
 closeBoxSidebar.addEventListener('click', hiddenSidebar);
+
+overlayMobile.addEventListener('click', function(event) {
+    if (event.target === overlayMobile) {
+        hiddenSidebar();
+    }
+});
+

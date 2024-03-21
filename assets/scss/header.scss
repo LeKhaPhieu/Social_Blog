@@ -20,8 +20,7 @@
         }
 
         .header-navbar-right {
-            display: flex;
-            align-items: center;
+            @include flex-center(flex-start, center);
 
             .header-logo {
                 width: 61px;
@@ -34,8 +33,8 @@
         }
 
         .header-navbar-left {
-            width: 35%;
             @include flex-center(space-between, center);
+            width: 35%;
             margin: 0 0 0 100px;
 
             .header-custom-page {
@@ -57,6 +56,7 @@
 
             .header-user {
                 @include flex-center(space-between, center);
+                margin: 0 0 0 15px;
 
                 .header-user-name {
                     margin: 0 15px 0 0;
@@ -76,20 +76,18 @@
 
         @include mobile {
             width: 100%;
-            height: 69px;
+            height: 70px;
             display: block;
-            display: flex;
-            align-items: center;
-            padding: 0px 20px;
+            @include flex-center(flex-start, center);
+            padding: 0 20px;
 
             .header-navbar-mobile {
                 width: 35px;
             }
 
             .header-logo-mobile {
-                display: flex;
-                align-items: center;
-                margin-left: 35%;
+                @include flex-center(flex-start, center);
+                margin-left: 33%;
 
                 .header-logo-image {
                     width: 47.09px;
