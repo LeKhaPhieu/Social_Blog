@@ -268,11 +268,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 80px 0 20% 0;
+  margin: 80px 0 150px 0;
 }
 @media (min-width: 320px) and (max-width: 768px) {
   .home-form .home-content .home-content-blog .home-move-tag {
-    margin: 80px 0 70% 0;
+    margin: 80px 0 250px 0;
   }
 }
 .home-form .home-content .home-content-blog .home-move-tag .move-left {
